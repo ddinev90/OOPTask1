@@ -25,6 +25,11 @@ namespace OOPTask
 
             elise.Draw();
 
+            Circle circle = new Circle(
+                new double[] { 2, 5 },
+                new double[] { 1, 3 });
+
+            circle.SurfaceArea();
             
 
             Console.ReadKey();
