@@ -32,13 +32,8 @@ namespace OOPTask
              double slopeBC = (pointCy - pointBy) / (pointCx - pointBx);
              double slopeAC = (pointCy - pointAy) / (pointCx - pointAx);
              double slopeBD = (pointDy - pointBy) / (pointDx - pointBx);
-
-           
-
-
-
-
-
+             double diagonalACLength = Math.Sqrt(Math.Pow((pointBx-pointAx),2) + Math.Pow((pointCy-pointAy),2));
+             double diagonalBDLength = Math.Sqrt(Math.Pow((pointDx - pointBx), 2) + Math.Pow((pointDy - pointBy), 2));
 
             if(slopeAB==slopeCD && slopeAD==slopeBC) //parallelogram
              {
@@ -57,8 +52,14 @@ namespace OOPTask
 
                 }
                 
-                if (slopeAB == slopeCD && slopeAD == slopeBC && slopeAC * slopeBD == -1)
+                if (slopeAB == slopeCD && slopeAD == slopeBC && slopeAC * slopeBD == -1) // rhombus
                 {
+                    if (diagonalACLength==diagonalBDLength) //square
+                    {
+                        Square squicky = new Square(pointAx, pointAy, pointBx, pointBy, pointCx, pointCy, pointDx, pointDy);
+                        squicky.Draw();
+                        return;
+                    }
                     Rhombus rhom = new Rhombus(pointAx, pointAy, pointBx, pointBy, pointCx, pointCy, pointDx, pointDy);
                     rhom.Draw();
                     return;
