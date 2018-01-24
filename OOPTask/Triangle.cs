@@ -6,23 +6,31 @@ using System.Threading.Tasks;
 
 namespace OOPTask
 {
-    class Triangle : IShape
+    class Triangle : Vertice, IShape
     {
-        public int[] vA { get; set; }
-        public int[] vB { get; set; }
-        public int[] vC { get; set; }
+        private double SideAXCoord { get; set; }
+        private double SideBXCoord { get; set; }
+        private double SideAYCoord { get; set; }
+        private double SideBYCoord { get; set; }
+        private double SideCXCoord { get; set; }
+        private double SideCYCoord { get; set; }
 
+        
 
         public void Draw()
         {
-            Console.WriteLine("My shape is Triangle");
+            
         }
 
-        public Triangle(int[] a, int[] b, int[] c)
+        public Triangle(double aX, double aY, double bX, double bY, double cX, double cY)
         {
-            this.vA = a;
-            this.vB = b;
-            this.vC = c;
+            Vertices VerticeA = new Vertices(SideAXCoord = aX, SideAYCoord = aY);
+            Vertices VerticeB = new Vertices(SideBXCoord = bX, SideBYCoord = bY);
+            Vertices VerticeC = new Vertices(SideCXCoord = cX, SideCYCoord = cY);
+
         }
+
+
+
     }
 }

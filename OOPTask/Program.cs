@@ -11,26 +11,30 @@ namespace OOPTask
         static void Main(string[] args)
         {
 
-            Quadrangle quadrangle = new Quadrangle(
-                new int[] { 15, 20 },
-                new int[] { 30, 40 },
-                new int[] { 3, 20 },
-                new int[] { 10, 15 });
+
+
+            Quadrangle quadrangle = new Quadrangle(4,6,2,3,2,5,3,4);
+
+            
 
             quadrangle.Draw();
 
-            Elipse elise = new Elipse(
-                new int[] { 6, 5 },
-                new int[] { 2, 2 });
+            Elipse elipse = new Elipse(15, 20, 30, 10);
 
-            elise.Draw();
+            elipse.Draw();
 
-            Circle circle = new Circle(
-                new double[] { 2, 5 },
-                new double[] { 1, 3 });
+            Circle circle = new Circle(5,2,3,5);
 
+            circle.Draw();
+
+            elipse.FocalLength();
             circle.SurfaceArea();
+
+            Parallelogram parallelogram = new Parallelogram(4, 3, 2, 4, 5, 6, 0, 0);
+
+            Square square = new Square(3, 4, 5, 6, 7, 8, 0, 0);
             
+
 
             Console.ReadKey();
         }

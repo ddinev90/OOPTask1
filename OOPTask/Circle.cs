@@ -6,31 +6,29 @@ using System.Threading.Tasks;
 
 namespace OOPTask
 {
-    class Circle : IShape
+    class Circle : Elipse, IShape
     {
 
-        public double[] Radius { get; set; } 
+        public double RadiusXCoord { get; set; }
+        public double RadiusYCoord { get; set; }
+        public double CenterXCoord { get; set; }
+        public double CenterYCoord { get; set; }
 
-        public double [] Center { get; set; }
-
-        public void Draw()
+        public Circle(double aX, double aY, double bX, double bY) : base(aX, aY, bX, bY)
         {
-            Console.WriteLine("A circle has been drawn");
+
+            RadiusXCoord = aX;
+            RadiusYCoord = aY;
+            CenterXCoord = bX;
+            CenterYCoord = bY;
+
         }
 
-        public Circle(double [] radius, double[] center)
+        public new void  SurfaceArea()
         {
-            Radius = radius;
-            Center=center;
-
+            double radiusLength = Math.Sqrt(Math.Abs((Math.Pow(RadiusXCoord, 2) - Math.Pow(CenterXCoord, 2)) + (Math.Pow(RadiusYCoord, 2) - Math.Pow(CenterYCoord, 2))));
+            double area = Math.PI * Math.Pow(radiusLength, 2);
+            Console.WriteLine("Surface area is {0}",area);
         }
-
-        public void SurfaceArea()
-        {
-            double area =  Math.PI * Math.Pow( Math.Sqrt(Math.Pow(Radius[0],2)+ Math.Pow(Radius[1],2)),2);
-            
-            Console.WriteLine("The circle surface area is {0}",area);
-        }
-
     }
 }

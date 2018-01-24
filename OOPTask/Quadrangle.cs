@@ -6,47 +6,39 @@ using System.Threading.Tasks;
 
 namespace OOPTask
 {
-    class Quadrangle : IShape
+    class Quadrangle : Vertice, IShape
     {
-        public int[] vA { get; set; }
-        public int[] vB { get; set; }
-        public int[] vC { get; set; }
-        public int[] vD { get; set; }
+
+        private double SideAXCoord { get; set; }
+        private double SideBXCoord { get; set; }
+        private double SideAYCoord { get; set; }
+        private double SideBYCoord { get; set; }
+        private double SideCXCoord { get; set; }
+        private double SideDXCoord { get; set; }
+        private double SideCYCoord { get; set; }
+        private double SideDYCoord { get; set; }
+
+
         public void Draw()
         {
-            Console.WriteLine("My shape is Quadrangle" );
-            Console.WriteLine("Side A has coords: ");
-            foreach (var coord in vA){
-                Console.Write(coord + " " );
-            }
-            Console.WriteLine("Side B has coords: ");
-            foreach (var coord in vB)
-            {
-                Console.Write(coord + " ");
-            }
-            Console.WriteLine("Side C has coords: ");
-            foreach (var coord in vC)
-            {
-                Console.Write(coord + " ");
-            }
-            Console.WriteLine("Side D has coords: ");
-            foreach (var coord in vD)
-            {
-                Console.Write(coord + " ");
-            }
-
+            Console.WriteLine("My shape is {0}", this.GetType().Name);
         }
 
-        public Quadrangle(int[]a,int[]b,int[]c,int[] d)
+        public Quadrangle(double aX, double aY, double bX, double bY, double cX, double cY, double dX, double dY)  
         {
-            this.vA = a;
-            this.vB = b;
-            this.vC = c;
-            this.vD = d;
+            Vertices VerticeA = new Vertices(SideAXCoord = aX, SideAYCoord = aY);
+            Vertices VerticeB = new Vertices(SideBXCoord = bX, SideBYCoord = bY);
+            Vertices VerticeC = new Vertices(SideCXCoord = cX, SideCYCoord = cY);
+            Vertices VerticeD = new Vertices(SideDXCoord = dX, SideDYCoord = dY);
 
         }
 
-
+        public double SurfaceArea()
+        {
+            Random rand = new Random();
+            double area = rand.NextDouble();
+            return area;
+        }
 
     }
 }
