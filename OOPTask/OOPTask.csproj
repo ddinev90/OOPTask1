@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Circle.cs" />
     <Compile Include="Elipse.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="Rhombus.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="Tree.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Vertice.cs" />
   </ItemGroup>

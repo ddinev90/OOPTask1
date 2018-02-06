@@ -8,13 +8,22 @@ namespace OOPTask
 {
     class Parallelogram : Quadrangle, IShape
     {
+        
 
-        public Parallelogram(double aX, double aY, double bX, double bY, double cX, double cY, double dX, double dY) : base(aX, aY, bX, bY, cX, cY, dX, dY)
+        public Parallelogram(double aX, double aY, double bX, double bY, double cX, double cY) : base(aX, aY, bX, bY, cX, cY)
         {
-            /* dX = cX - bX + aX;
-            dY = cY - bY + aY;
-            Console.Write("The missing vertice X coord is {0}" + " and the missing Y coord is {1} ",dX,dY, Environment.NewLine); */
+           double  dX = cX - bX + aX;
+           double  dY = cY - bY + aY;
+           Console.Write("The missing vertice X coord is {0}" + " and the missing Y coord is {1} ",dX,dY, Environment.NewLine); 
             
         }
+
+        public override double SurfaceArea()
+        {
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            double area = rand.NextDouble();
+            return area;
+        }
+
     }
 }

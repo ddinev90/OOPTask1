@@ -24,13 +24,18 @@ namespace OOPTask
 
         public Triangle(double aX, double aY, double bX, double bY, double cX, double cY)
         {
-            Vertices VerticeA = new Vertices(SideAXCoord = aX, SideAYCoord = aY);
+            Vertices VerticeA = new Vertices(SideAXCoord = aX, SideAYCoord = aY);            
             Vertices VerticeB = new Vertices(SideBXCoord = bX, SideBYCoord = bY);
             Vertices VerticeC = new Vertices(SideCXCoord = cX, SideCYCoord = cY);
 
         }
 
-
+        public  double  SurfaceArea()
+        {
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            double area = rand.NextDouble();
+            return area;
+        }
 
     }
 }

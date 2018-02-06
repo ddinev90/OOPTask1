@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOPTask
 {
-    interface IShape
+    public interface IShape
     {
         void Draw();
+        double SurfaceArea();
     }
 }

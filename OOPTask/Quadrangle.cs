@@ -19,9 +19,16 @@ namespace OOPTask
         private double SideDYCoord { get; set; }
 
 
-        public void Draw()
+        public  void Draw()
         {
             Console.WriteLine("My shape is {0}", this.GetType().Name);
+        }
+
+        public virtual double SurfaceArea()
+        {
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            double area = rand.NextDouble();
+            return area;
         }
 
         public Quadrangle(double aX, double aY, double bX, double bY, double cX, double cY, double dX, double dY)  
@@ -32,13 +39,16 @@ namespace OOPTask
             Vertices VerticeD = new Vertices(SideDXCoord = dX, SideDYCoord = dY);
 
         }
-
-        public double SurfaceArea()
+        public Quadrangle(double aX, double aY, double bX, double bY, double cX, double cY)
         {
-            Random rand = new Random();
-            double area = rand.NextDouble();
-            return area;
+            Vertices VerticeA = new Vertices(SideAXCoord = aX, SideAYCoord = aY);
+            Vertices VerticeB = new Vertices(SideBXCoord = bX, SideBYCoord = bY);
+            Vertices VerticeC = new Vertices(SideCXCoord = cX, SideCYCoord = cY);
+            
+
         }
+
+        
 
     }
 }

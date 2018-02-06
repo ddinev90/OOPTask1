@@ -10,8 +10,8 @@ namespace OOPTask
     {
         public struct Vertices
         {
-            double x;
-            double y;
+            public double x;
+            public double y;
             public Vertices(double x, double y)
             {
                 this.x = x;

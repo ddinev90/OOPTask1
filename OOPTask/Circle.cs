@@ -24,11 +24,11 @@ namespace OOPTask
 
         }
 
-        public new void  SurfaceArea()
+        public override double  SurfaceArea()
         {
             double radiusLength = Math.Sqrt(Math.Abs((Math.Pow(RadiusXCoord, 2) - Math.Pow(CenterXCoord, 2)) + (Math.Pow(RadiusYCoord, 2) - Math.Pow(CenterYCoord, 2))));
             double area = Math.PI * Math.Pow(radiusLength, 2);
-            Console.WriteLine("Surface area is {0}",area);
+            return area;
         }
     }
 }

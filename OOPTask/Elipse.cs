@@ -14,12 +14,13 @@ namespace OOPTask
         private double PointAYCoord { get; set; }
         private double PointBYCoord { get; set; }
 
+        
 
         public struct FocalPoints
         {
             double x;
             double y;
-             public FocalPoints(double x,double y)
+            public FocalPoints(double x, double y)
             {
                 this.x = x;
                 this.y = y;
@@ -33,16 +34,15 @@ namespace OOPTask
             FocalPoints focalPointA = new FocalPoints(PointAXCoord = aX, PointAYCoord = aY);
             FocalPoints focalPointB = new FocalPoints(PointBXCoord = bX, PointBYCoord = bY);
 
-           
+
         }
 
 
-        public double SurfaceArea()
+        public virtual double SurfaceArea()
         {
 
-            Random rand = new Random();
-            double area = rand.NextDouble();
-            return area;
+            
+            return 5;
         }
 
         public void Draw()
@@ -52,8 +52,8 @@ namespace OOPTask
 
         public void FocalLength()
         {
-             double focalLength = Math.Sqrt(Math.Abs((Math.Pow(PointAXCoord, 2) - Math.Pow(PointBXCoord, 2)) + (Math.Pow(PointAYCoord, 2) - Math.Pow(PointBYCoord, 2))));
-            Console.WriteLine("Focal length is: {0}",focalLength);
+            double focalLength = Math.Sqrt(Math.Abs((Math.Pow(PointAXCoord, 2) - Math.Pow(PointBXCoord, 2)) + (Math.Pow(PointAYCoord, 2) - Math.Pow(PointBYCoord, 2))));
+            Console.WriteLine("Focal length is: {0}", focalLength);
         }
     }
 }
