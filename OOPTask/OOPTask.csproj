@@ -44,23 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
-    <Compile Include="Elipse.cs" />
-    <Compile Include="Node.cs" />
-    <Compile Include="Parallelogram.cs" />
+    <Compile Include="Elipsoids\Circle.cs" />
+    <Compile Include="Elipsoids\Elipse.cs" />
+    <Compile Include="Logic\FigureFinder.cs" />
+    <Compile Include="Binary Tree\Node.cs" />
+    <Compile Include="Quadrangles\Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quadrangle.cs" />
-    <Compile Include="IShape.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Rhombus.cs" />
-    <Compile Include="Square.cs" />
-    <Compile Include="Tree.cs" />
+    <Compile Include="Quadrangles\Quadrangle.cs" />
+    <Compile Include="Interfaces\IShape.cs" />
+    <Compile Include="Quadrangles\Rectangle.cs" />
+    <Compile Include="Quadrangles\Rhombus.cs" />
+    <Compile Include="Quadrangles\Square.cs" />
+    <Compile Include="Binary Tree\Tree.cs" />
     <Compile Include="Triangle.cs" />
-    <Compile Include="Vertice.cs" />
+    <Compile Include="Logic\Vertice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
